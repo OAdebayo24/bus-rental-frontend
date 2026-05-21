@@ -2,8 +2,7 @@ import { useState } from "react"
 import ImageSlider from "../components/ImageSlider"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
-import BusOne from "../assets/images/longbus.png"
-import BusTwo from "../assets/images/bus2.png"
+import { longbus, bus2 } from "../../public/images"
 import { Link } from "react-router-dom"
 
 
@@ -14,9 +13,9 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState("tab1")
 
   const slides = [
-    { url: "/src/assets/images/coaster.png", title: "coaster" },
-    { url: "/src/assets/images/toyotaHiace.png", title: "hiace" },
-    { url: "/src/assets/images/urban_bus.png", title: "urban bus" },
+    { url: "../../public/images/coaster.png", title: "coaster" },
+    { url: "../../public/images/toyotaHiace.png", title: "hiace" },
+    { url: "../../public/images/urbanBus.png", title: "urbanBus" },
   ]
 
   const tabs = [
@@ -164,14 +163,14 @@ const Home = () => {
 
       <section className="p-2 my-0 mx-auto flex justify-between max-w-11/12">
         <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
-          <img src={BusOne} className="h-80 w-full" alt="vehicle-rental-image" />
+          <img src={longbus} className="h-80 w-full" alt="vehicle-rental-image" />
           <Link to="/vehicle-rental">
             <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Vehicle rental</h3>
           </Link>
           <p>Use our vehicle rental service to unlock the freedom to travel anywhere, at any time. Explore the world on your terms and find a variety of solutions to meet your travel preferences. </p>
         </section>
         <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
-          <img src={BusTwo} className="h-80 w-full" alt="business-rental-image" />
+          <img src={bus2} className="h-80 w-full" alt="business-rental-image" />
           <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Business rental</h3>
           <p>Discover the effectiveness and ease of Organized Mass Transportation, your trustworthy option for smooth, timely, and environmentally responsible transportation. </p>
         </section>

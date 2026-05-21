@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import Bus from "../assets/images/Bus.png"
+// import { Bus } from "../../public/images"
+
 
 const NavBar = () => {
   return (
