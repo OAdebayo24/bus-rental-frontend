@@ -3,6 +3,7 @@ import ImageSlider from "../components/ImageSlider"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import { longbus, bus2 } from "../../public/images"
+
 import { Link } from "react-router-dom"
 
 
@@ -14,6 +15,7 @@ const Home = () => {
 
   const slides = [
     { url: "../../public/images/coaster.png", title: "coaster" },
+
     { url: "../../public/images/toyotaHiace.png", title: "hiace" },
     { url: "../../public/images/urbanBus.png", title: "urbanBus" },
   ]
@@ -110,7 +112,7 @@ const Home = () => {
             type="date"
             value={name}
             onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointe"
+            className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 cursor-pointer"
           />
         </div>
 
