@@ -1,0 +1,54 @@
+import { useState } from "react"
+
+const AdminLogin = () => {
+  const [name, setName] = useState()
+
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setName((prev) => ({ ...prev, [name]: value }))
+  }
+
+
+  return (
+    <>
+      <section className=" flex flex-row ml-16 mt-16 gap-8">
+        <form action="post" className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
+          <div className="flex flex-col flex-1 gap-1">
+            <label htmlFor="firstname" className="text-sm font-semibold text-gray-600">Company Email</label>
+            <input type="text"
+              value={name}
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+          <div className="flex flex-col flex-1 gap-1">
+            <label htmlFor="firstname" className="text-sm font-semibold text-gray-600">Comapny Password</label>
+            <input
+              type="password"
+              value={name}
+              onChange={handleChange}
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors duration-200 w-full mt-2"
+          >Log in</button>
+          <p>Forgot Password</p>
+        </form>
+        <div>
+          <h2 className="text-3xl font-bold text-black">Login into user dashboard</h2>
+          <p className="text-gray-600 text-lg max-w-md">
+            Your paragraph text goes here. This sits above the form with
+            consistent spacing between them.
+          </p>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default AdminLogin
