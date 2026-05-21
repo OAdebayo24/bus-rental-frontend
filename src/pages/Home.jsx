@@ -2,8 +2,11 @@ import { useState } from "react"
 import ImageSlider from "../components/ImageSlider"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
-import { longbus, bus2 } from "../../public/images"
-
+import longbus from "../../public/images/longbus.png"
+import coaster from "../../public/images/coaster.png"
+import toyotaHiace from "../../public/images/toyotaHiace.png"
+import urbanBus from "../../public/images/urbanBus.png"
+import bus2 from "../../public/images/bus2.png"
 import { Link } from "react-router-dom"
 
 
@@ -14,10 +17,9 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState("tab1")
 
   const slides = [
-    { url: "../../public/images/coaster.png", title: "coaster" },
-
-    { url: "../../public/images/toyotaHiace.png", title: "hiace" },
-    { url: "../../public/images/urbanBus.png", title: "urbanBus" },
+    { url: coaster, title: "coaster" },
+    { url: toyotaHiace, title: "hiace" },
+    { url: urbanBus, title: "urbanBus" },
   ]
 
   const tabs = [
