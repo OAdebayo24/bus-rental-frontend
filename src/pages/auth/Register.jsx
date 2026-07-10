@@ -1,13 +1,36 @@
+import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const RegisterUser = () => {
-  const [name, setName] = useState()
-
+  const [name, setName] = useState("")
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  })
+  const [apiSuccessMessage, setApiSuccessMessage] = useState("")
+  const navigate = useNavigate()
 
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setName((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const apiResponse = await axios.post("https://www.onrender.com/api/auth/signup", userData)
+    const { token, user } = apiResponse.data
+    console.log(apiResponse)
+    localStorage.setItem("user token: ", token)
+
+    if(apiResponse.status == 200) {
+      setApiSuccessMessage("User successfully signed up", user)
+    }
+
+    navigate("/user-login")
   }
 
 
@@ -21,7 +44,10 @@ const RegisterUser = () => {
             service.
           </p>
         </div>
-        <form action="post" className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
+        <form 
+          action="post" 
+          onSubmit={handleSubmit}
+          className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
           <div className="flex flex-col flex-1 gap-1">
             <label htmlFor="firstname" className="text-sm font-semibold text-gray-600">First Name</label>
             <input type="text"

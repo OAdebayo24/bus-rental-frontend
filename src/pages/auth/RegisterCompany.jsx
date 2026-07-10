@@ -1,7 +1,14 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const RegisterUser = () => {
   const [name, setName] = useState()
+  const [userData, setUserData] = useState({
+    businessName: "",
+    email: "",
+    password: ""
+  })
+  const navigate = useNavigate()
 
 
 
@@ -10,6 +17,14 @@ const RegisterUser = () => {
     setName((prev) => ({ ...prev, [name]: value }))
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const apiResponse = await axios.post("", userData)
+    const { token, user } = apiResponse.data
+
+    localStorage.setItem("company registration token", token)
+    navigate("/company-login")
+  }
 
   return (
     <>
@@ -21,7 +36,7 @@ const RegisterUser = () => {
             service.
           </p>
         </div>
-        <form action="post" className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
+        <form onSubmit={handleSubmit} action="post" className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
           <div className="flex flex-col flex-1 gap-1">
             <label htmlFor="companyname" className="text-sm font-semibold text-gray-600">Company Name</label>
             <input type="text"

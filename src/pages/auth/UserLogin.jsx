@@ -1,8 +1,13 @@
+import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const UserLogin =() => {
+const UserLogin = () => {
   const [name, setName] = useState()
+  const [userLogin, setUserLogin] = useState({
+    email: "",
+    password: ""
+  })
 
 
 
@@ -11,11 +16,24 @@ const UserLogin =() => {
     setName((prev) => ({...prev, [name]: value}))
   }
 
+  const handleSubmit = async () => {
+    const apiResponse = await axios.post("http://www.onrender.com/api/auth/login", userLogin)
+    const { token, user } = apiResponse.data
+
+    localStorage.setItem("user login token", token)
+    if(apiResponse == 200) {
+      setMessage("User logged in successfully", user)
+    }
+  }
+
 
   return (
     <>
       <section className=" flex flex-row ml-16 mt-16 gap-8">
-      <form action="post" className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
+      <form 
+        action="post" 
+        onSubmit={handleSubmit}
+        className="bg-white shadow-md rounded-xl p-8 w-md mt-10 ml-10 flex flex-col gap-5">
       <div className="flex flex-col flex-1 gap-1">
         <label htmlFor="firstname" className="text-sm font-semibold text-gray-600">Email</label>
         <input type="text" 
