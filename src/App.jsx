@@ -14,6 +14,8 @@ import RegisterAdmin from "./pages/auth/RegisterAdmin"
 import RegisterCompany from "./pages/auth/RegisterCompany"
 import RegisterUser from "./pages/auth/Register"
 import RegisterAs from "./pages/auth/RegisterAs"
+import VehicleDetails
+ from "./pages/VehicleDetails"
 
 function App() {
 
@@ -35,6 +37,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/vehicle-rental" element={<VehicleRental />} />
+        <Route path="/vehicle-details/:id" element={< VehicleDetails />} />
       </Routes>
     </BrowserRouter>
   )

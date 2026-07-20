@@ -2,11 +2,11 @@ import { useState } from "react"
 import ImageSlider from "../components/ImageSlider"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
-import longbus from "../../public/images/longbus.png"
-import coaster from "../../public/images/coaster.png"
-import toyotaHiace from "../../public/images/toyotaHiace.png"
-import urbanBus from "../../public/images/urbanBus.png"
-import bus2 from "../../public/images/bus2.png"
+import longbus from "../../src/images/longbus.png"
+import coaster from "../../src/images/coaster.png"
+import toyotaHiace from "../../src/images/toyotaHiace.png"
+import urbanBus from "../../src/images/urbanBus.png"
+import bus4 from "../../src/images/bus4.png"
 import { Link } from "react-router-dom"
 
 
@@ -174,7 +174,7 @@ const Home = () => {
           <p>Use our vehicle rental service to unlock the freedom to travel anywhere, at any time. Explore the world on your terms and find a variety of solutions to meet your travel preferences. </p>
         </section>
         <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
-          <img src={bus2} className="h-80 w-full" alt="business-rental-image" />
+          <img src={bus4} className="h-80 w-full rounded-xl" alt="business-rental-image" />
           <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Business rental</h3>
           <p>Discover the effectiveness and ease of Organized Mass Transportation, your trustworthy option for smooth, timely, and environmentally responsible transportation. </p>
         </section>

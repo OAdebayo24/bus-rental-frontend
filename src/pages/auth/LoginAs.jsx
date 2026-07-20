@@ -21,7 +21,7 @@ const LoginAs = () => {
           <AuthCardLogin 
             key={item.title} 
             title={item.title} 
-            body={item.body} 
+            body={item.body}
             selected={selected}
             onClick={() => setSelected(item.title)} />
         ))}
