@@ -166,17 +166,20 @@ const Home = () => {
       </section>
 
       <section className="p-2 my-0 mx-auto flex justify-between max-w-11/12">
+          <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
+            <Link to="/vehicle-rental" className="cursor-pointer ">
+              <img src={longbus} className="h-80 w-full" alt="vehicle-rental-image" />
+                <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Vehicle rental</h3>
+              <p>Use our vehicle rental service to unlock the freedom to travel anywhere, at any time. Explore the world on your terms and find a variety of solutions to meet your travel preferences. </p>
+            </Link>
+          </section>
+          
         <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
-          <img src={longbus} className="h-80 w-full" alt="vehicle-rental-image" />
-          <Link to="/vehicle-rental">
-            <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Vehicle rental</h3>
+          <Link to="/vehicle-rental" className="cursor-pointer">
+            <img src={bus4} className="h-80 w-full rounded-xl" alt="business-rental-image" />
+            <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Business rental</h3>
+            <p>Discover the effectiveness and ease of Organized Mass Transportation, your trustworthy option for smooth, timely, and environmentally responsible transportation. </p>
           </Link>
-          <p>Use our vehicle rental service to unlock the freedom to travel anywhere, at any time. Explore the world on your terms and find a variety of solutions to meet your travel preferences. </p>
-        </section>
-        <section className="flex-1 shadow-md rounded-xl text-center bg-white p-4 m-2">
-          <img src={bus4} className="h-80 w-full rounded-xl" alt="business-rental-image" />
-          <h3 className="text-3xl font-semibold mb-4 border-b border-white/30 inline-block pb-1">Business rental</h3>
-          <p>Discover the effectiveness and ease of Organized Mass Transportation, your trustworthy option for smooth, timely, and environmentally responsible transportation. </p>
         </section>
       </section>
     </main>
