@@ -16,7 +16,7 @@ const VehicleRentalCard = ({ id, thumbnail, type, price, description, amenities 
         </ul> */}
         <div className="flex items-center justify-between mt-4">
           <button 
-            className="bg-black text-white text-sm px-4 py-2 rounded-md"
+            className="bg-black text-white text-sm px-4 py-2 rounded-md cursor-pointer"
             onClick={() => navigate(`/vehicle-details/${id}`)}>continue</button>
           <p className="font-medium">{price}</p>
         </div>

@@ -4,7 +4,7 @@ import vehicle from "../vehicle"
 
 const VehicleDetails = () => {
   const { id } = useParams()
-  const selectedVehicle = vehicle.find((item) = item.id === Number(id))
+  const selectedVehicle = vehicle.find((item) => item.id === Number(id))
 
   if(!selectedVehicle) {
     return (
@@ -30,7 +30,7 @@ const VehicleDetails = () => {
         ))}
       </ul>
 
-      <button>Book now</button>
+      <button className="cursor-pointer">Book now</button>
     </main>
     </>
   )

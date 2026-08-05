@@ -66,7 +66,7 @@ const NavBar = () => {
 
             <div className="flex flex-col gap-3 pt-2">
               <Link to="/login-as" onClick={() => setIsOpen(false)}>
-                <button className="bg-white border-0 cursor-pointer w-full text-left">
+                <button className="bg-white border-0 cursor-pointer w-full text-center rounded-full">
                   <li className="text-black list-none">Login</li>
                 </button>
               </Link>
