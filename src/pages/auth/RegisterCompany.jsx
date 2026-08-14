@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import api from "../../services/api"
 
 const RegisterUser = () => {
   const [name, setName] = useState()
@@ -19,7 +20,7 @@ const RegisterUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const apiResponse = await axios.post("", userData)
+    const apiResponse = await api.post("", userData)
     const { token, user } = apiResponse.data
 
     localStorage.setItem("company registration token", token)

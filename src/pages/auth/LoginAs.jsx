@@ -12,7 +12,6 @@ const LoginAs = () => {
     { title: "Admin", body: "Manage users activities effectively" },
   ]
 
-
   return (
     <>
       <div className="m-20">

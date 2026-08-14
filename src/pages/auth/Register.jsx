@@ -1,6 +1,6 @@
-import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import api from "../../services/api"
 
 const RegisterUser = () => {
   const [name, setName] = useState("")
@@ -21,7 +21,7 @@ const RegisterUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const apiResponse = await axios.post("https://www.onrender.com/api/auth/signup", userData)
+    const apiResponse = await api.post("https://www.onrender.com/api/auth/signup", userData)
     const { token, user } = apiResponse.data
     console.log(apiResponse)
     localStorage.setItem("user token: ", token)

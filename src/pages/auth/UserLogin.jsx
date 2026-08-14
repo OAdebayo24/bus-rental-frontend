@@ -1,6 +1,6 @@
-import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import api from "../../services/api"
 
 const UserLogin = () => {
   const [name, setName] = useState()
@@ -17,7 +17,7 @@ const UserLogin = () => {
   }
 
   const handleSubmit = async () => {
-    const apiResponse = await axios.post("http://www.onrender.com/api/auth/login", userLogin)
+    const apiResponse = await api.post("http://www.onrender.com/api/auth/login", userLogin)
     const { token, user } = apiResponse.data
 
     localStorage.setItem("user login token", token)
