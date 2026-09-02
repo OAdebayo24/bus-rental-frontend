@@ -175,7 +175,7 @@ const Home = () => {
           <section className="p-2 sm:p-4 my-0 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 max-w-full lg:max-w-6xl">
             <section className="shadow-md rounded-xl text-center bg-white p-4 flex flex-col">
               <Link to="/vehicle-rental" className="cursor-pointer flex flex-col h-full">
-                <div className="w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden rounded-lg">
+                <div className="w-full sm:aspect-4/3 overflow-hidden rounded-lg">
                   <img
                     src={longbus}
                     className="w-full h-full object-cover"
@@ -193,7 +193,7 @@ const Home = () => {
 
             <section className="shadow-md rounded-xl text-center bg-white p-4 flex flex-col">
               <Link to="/vehicle-rental" className="cursor-pointer flex flex-col h-full">
-                <div className="w-full aspect-[4/3] sm:aspect-[16/9] overflow-hidden rounded-lg">
+                <div className="w-full aspect-4/3 overflow-hidden rounded-lg">
                   <img
                     src={bus4}
                     className="w-full h-full object-cover"
